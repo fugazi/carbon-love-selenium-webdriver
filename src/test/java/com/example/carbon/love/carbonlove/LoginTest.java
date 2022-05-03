@@ -13,5 +13,6 @@ public class LoginTest {
     public void loginTest() {
         loginPage = new LoginPage(driver);
         loginPage.setupUrl();
+        loginPage.tearDown();
     }
 }
