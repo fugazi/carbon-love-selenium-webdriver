@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running Smoke Tests'
                 git 'https://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@github.com/fugazi/carbon-love-selenium-webdriver.git'
-                sh 'clean install -Denvironment="$environment"'
+                sh 'mvn clean install -Denvironment="$environment"'
                 echo 'Smoke Test has been completed!'
             }
         }
