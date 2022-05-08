@@ -10,10 +10,7 @@ pipeline {
         stage('Test Smoke') {
             steps {
                 echo 'Running Smoke Tests'
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
                 git 'https://github.com/fugazi/carbon-love-selenium-webdriver.git'
-                sh 'mvn -B -DskipTests clean package'
             }
             post {
                 success {
