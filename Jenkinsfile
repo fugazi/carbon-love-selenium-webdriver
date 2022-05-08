@@ -10,7 +10,7 @@ pipeline {
         stage('Test Smoke') {
             steps {
                 echo 'Running Smoke Tests'
-                git 'https://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@github.com/fugazi/carbon-love-selenium-webdriver.git'
+                git 'https://github.com/fugazi/carbon-love-selenium-webdriver.git'
                 sh 'mvn clean'
             }
             post {
