@@ -11,7 +11,6 @@ pipeline {
             steps {
                 echo 'Running Smoke Tests'
                 git 'https://github.com/fugazi/carbon-love-selenium-webdriver.git'
-                sh 'mvn clean'
             }
             post {
                 success {
