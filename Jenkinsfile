@@ -2,7 +2,7 @@ pipeline {
     // Validando el agente en el que va a estar corriendo
     agent any
     tools{
-        jdk "jdk-11"
+        jdk "jdk11"
         maven "Maven 3.8.5"
     }
 
@@ -10,7 +10,10 @@ pipeline {
         stage('Test Smoke') {
             steps {
                 echo 'Running Smoke Tests'
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
                 git 'https://github.com/fugazi/carbon-love-selenium-webdriver.git'
+                sh 'mvn -B -DskipTests clean package'
             }
             post {
                 success {
