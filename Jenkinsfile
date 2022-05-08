@@ -2,7 +2,7 @@ pipeline {
     // Validando el agente en el que va a estar corriendo
     agent any
     tools{
-        jdk "openjdk-11"
+        jdk "jdk-11"
         maven "Maven 3.8.5"
     }
 
