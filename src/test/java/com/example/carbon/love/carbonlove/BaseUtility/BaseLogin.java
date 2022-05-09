@@ -51,7 +51,7 @@ public class BaseLogin {
      * Adds the user and password to the login page using the INVALID_USER credentials
      * @return the LoginPage class
      */
-    public LoginPage authenticateInvalidUser() {
+    public LoginPage authenticateInvalidUser(LoginCredentials accessCredentials) {
         return authenticateAs(LoginCredentials.INVALID_USER);
     }
 

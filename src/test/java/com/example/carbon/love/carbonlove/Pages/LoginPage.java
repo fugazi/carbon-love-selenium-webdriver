@@ -17,6 +17,7 @@ public class LoginPage extends BaseLogin {
     By loginButton = By.xpath("//*[@data-test='login-button']");
     By appLogo = By.cssSelector(".app_logo");
     By errorMessage = By.xpath("//*[@data-test='error']");
+    By getTitle = By.xpath("//span[@class='title']");
 
     /**
      * Constructor stub to initialize the driver object
@@ -101,5 +102,13 @@ public class LoginPage extends BaseLogin {
      */
     public String getErrorMessage() {
         return driver.findElement(this.errorMessage).getText();
+    }
+
+    /**
+     * This method will check on the products title
+     * Get the title and return it
+     */
+    public String getTitle() {
+        return driver.findElement(this.getTitle).getText();
     }
 }
