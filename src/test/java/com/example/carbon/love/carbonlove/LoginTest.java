@@ -13,7 +13,6 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 class LoginTest {
 
     public WebDriver driver;
-    private LoginPage loginPage;
 
     /**
      * Test login with valid credentials: STANDARD_USER
