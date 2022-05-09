@@ -16,6 +16,7 @@ public class LoginPage extends BaseLogin {
     By password = By.xpath("//*[@data-test='password']");
     By loginButton = By.xpath("//*[@data-test='login-button']");
     By appLogo = By.cssSelector(".app_logo");
+    By errorMessage = By.xpath("//*[@data-test='error']");
 
     /**
      * Constructor stub to initialize the driver object
@@ -91,5 +92,14 @@ public class LoginPage extends BaseLogin {
         } catch (NoSuchElementException ignored) {
             return false;
         }
+    }
+
+    /**
+     * This method will check on the error message
+     * Get the error message and return it
+     * @return String
+     */
+    public String getErrorMessage() {
+        return driver.findElement(this.errorMessage).getText();
     }
 }

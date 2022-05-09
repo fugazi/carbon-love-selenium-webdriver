@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
+import static com.example.carbon.love.carbonlove.BaseUtility.LoginCredentials.LOCKED_OUT_USER;
 import static com.example.carbon.love.carbonlove.BaseUtility.LoginCredentials.STANDARD_USER;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
@@ -31,5 +32,23 @@ class LoginTest {
                     .isTrue();
         });
         loginPage.tearDown();
+    }
+
+    /**
+     * Test login with valid credentials: LOCKED_OUT_USER
+     */
+    @Test
+    @DisplayName("Login with valid credentials: LOCKED_OUT_USER")
+    @Tag("Smoke")
+    void loginWithValidCredentialsLockedOutUser() {
+        LoginPage loginPage = new LoginPage(driver);
+        BaseLogin baseLogin = new BaseLogin(loginPage);
+        loginPage.setupUrl();
+        baseLogin.authenticateLockedOutUser(LOCKED_OUT_USER);
+        assertSoftly(softly -> {
+            softly.assertThat(loginPage.getErrorMessage())
+                    .describedAs("The error message is not as expected.")
+                    .isEqualTo("Epic sadface: Sorry, this user has been locked out.");
+        });
     }
 }

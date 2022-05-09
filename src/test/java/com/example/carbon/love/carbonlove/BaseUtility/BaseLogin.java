@@ -43,7 +43,7 @@ public class BaseLogin {
      * Adds the user and password to the login page using the LOCKED_OUT_USER credentials
      * @return the LoginPage class
      */
-    public LoginPage authenticateLockedOutUser() {
+    public LoginPage authenticateLockedOutUser(LoginCredentials accessCredentials) {
         return authenticateAs(LoginCredentials.LOCKED_OUT_USER);
     }
 
