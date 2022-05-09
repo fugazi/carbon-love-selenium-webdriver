@@ -64,7 +64,4 @@ public class BaseLogin {
         authenticate(accessCredentials.getUserName(), accessCredentials.getPassword());
         return new LoginPage(driver);
     }
-
-    private void threadSleep(int i) {
-    }
 }
