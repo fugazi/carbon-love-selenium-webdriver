@@ -7,5 +7,14 @@
         "port": "4444"
       }
     }
+  },
+  "edge": {
+    "default": "101.0",
+    "versions": {
+      "14.0": {
+        "image": "selenoid/vnc:edge_101.0",
+        "port": "4444"
+      }
+    }
   }
 }
