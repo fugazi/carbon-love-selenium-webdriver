@@ -26,7 +26,7 @@ The main features of this project has the following:
 
 ## 🛠️ Running the project:
 1. Download the project from GitHub
-    * Option 1: `git clone https://github.com/fugazi/`
+    * Option 1: `git clone https://github.com/fugazi/carbon-love-selenium-webdriver.git`
     * Option 2: Download it as a Zip file and extract it
 2. CD into the `Carbon Love` folder
 3. Set up Apache Maven
