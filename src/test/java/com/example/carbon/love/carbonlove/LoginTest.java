@@ -34,12 +34,12 @@ class LoginTest {
     }
 
     /**
-     * Test login with invalid credentials: LOCKED_OUT_USER
+     * Test login with error message credentials: LOCKED_OUT_USER
      */
     @Test
-    @DisplayName("Login with invalid credentials: LOCKED_OUT_USER")
+    @DisplayName("Login with error message credentials: LOCKED_OUT_USER")
     @Tag("Smoke")
-    void loginWithInvalidCredentialsLockedOutUser() {
+    void loginWithErrorMessageLockedOutUser() {
         LoginPage loginPage = new LoginPage(driver);
         BaseLogin baseLogin = new BaseLogin(loginPage);
         loginPage.setupUrl();
