@@ -5,12 +5,12 @@ public enum LoginCredentials {
     LOCKED_OUT_USER("locked_out_user", "secret_sauce"),
     INVALID_USER("problem_user", "secret_sauce");
 
-    private String userName;
-    private String password;
+    public final String aUserName;
+    public final String aPassword;
 
     LoginCredentials(String aUserName, String aPassword) {
-        this.userName = aUserName;
-        this.password = aPassword;
+        this.aUserName = aUserName;
+        this.aPassword = aPassword;
     }
 
     /**
@@ -18,7 +18,7 @@ public enum LoginCredentials {
      * @return the username
      */
     public String getUserName() {
-        return userName;
+        return aUserName;
     }
 
     /**
@@ -26,6 +26,6 @@ public enum LoginCredentials {
      * @return the password
      */
     public String getPassword() {
-        return password;
+        return aPassword;
     }
 }
